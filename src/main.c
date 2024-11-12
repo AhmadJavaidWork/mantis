@@ -1,6 +1,6 @@
 #include "string.h"
 #include "stdlib.h"
-#include "lexer.h"
+#include "../include/lexer.h"
 
 int main(int argc, char *argv[])
 {
@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
     }
 
     lexer *l = new_lexer(fptr);
+
     free_lexer(l);
     fclose(fptr);
 

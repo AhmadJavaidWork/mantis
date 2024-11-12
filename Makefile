@@ -1,9 +1,9 @@
 CC = gcc
 CFLAGS = -g
-DEPS = lexer.h token.h
-OBJ = main.o lexer.o token.o
+DEPS = include/*.h
+OBJ = src/*.c
 
-%.o: %.c $(DEPS)
+%.o: %.c include/$(DEPS)
 	$(CC) $(CFLAGS) -c -o $@ $<
 	
 mantis: $(OBJ)
