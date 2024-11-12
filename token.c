@@ -1,6 +1,7 @@
 #include "token.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 char *lookup_keyword(char *literal)
 {
@@ -36,4 +37,10 @@ char *lookup_keyword(char *literal)
     {
         return IDENT;
     }
+}
+
+void free_token(token t)
+{
+    free(t.literal);
+    free(t.token_type);
 }
