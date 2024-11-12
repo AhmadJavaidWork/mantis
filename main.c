@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
     }
 
     lexer *l = new_lexer(fptr);
+    free_lexer(l);
     fclose(fptr);
 
     return 0;
