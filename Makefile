@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -g
-DEPS = lexer.h
-OBJ = main.o lexer.o
+DEPS = lexer.h token.h
+OBJ = main.o lexer.o token.o
 
 %.o: %.c $(DEPS)
 	$(CC) $(CFLAGS) -c -o $@ $<
